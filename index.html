@@ -1,82 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>YouTube Replica</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura - Website Management Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .section-title {
+            @apply text-3xl md:text-4xl font-bold text-gray-800 mb-4 text-center;
+        }
+        .section-subtitle {
+            @apply text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
 
-  <header>
-    <div class="container">
-      <h1>YouTube Replica</h1>
-      <nav>
-        <a href="#upload" class="btn">Upload Video</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      <h2>Discover, Upload, and Share Videos</h2>
-      <p>Enjoy endless content or share your own with the world!</p>
-    </div>
-  </section>
-
-  <section class="catalog">
-    <div class="container">
-      <h2>Featured Videos</h2>
-      <div class="video-grid">
-        <div class="video-card">
-          <img src="https://via.placeholder.com/300x180.png?text=Trending+1" alt="Video 1">
-          <p>Top 10 Trending Videos — 12:34</p>
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-2xl font-bold text-gray-800">
+                    Aura<span class="text-indigo-600">.</span>
+                </a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Home</a>
+                    <a href="#services" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Services</a>
+                    <a href="#about" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">About</a>
+                    <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition-colors duration-300">Contact</a>
+                </nav>
+                <a href="#contact" class="hidden md:inline-block bg-indigo-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-indigo-700 transition-transform duration-300 hover:scale-105">
+                    Get Started
+                </a>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <a href="#home" class="block py-2 px-4 text-sm text-gray-600 hover:bg-indigo-50 rounded">Home</a>
+                <a href="#services" class="block py-2 px-4 text-sm text-gray-600 hover:bg-indigo-50 rounded">Services</a>
+                <a href="#about" class="block py-2 px-4 text-sm text-gray-600 hover:bg-indigo-50 rounded">About</a>
+                <a href="#contact" class="block py-2 px-4 text-sm text-gray-600 hover:bg-indigo-50 rounded">Contact</a>
+                 <a href="#contact" class="block w-full mt-2 text-center bg-indigo-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-indigo-700 transition-transform duration-300">
+                    Get Started
+                </a>
+            </div>
         </div>
-        <div class="video-card">
-          <img src="https://via.placeholder.com/300x180.png?text=Music+Mix" alt="Video 2">
-          <p>Popular Music Mix — 08:21</p>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="gradient-bg py-24 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-800 leading-tight mb-6">
+                    Effortless Website Management
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto mb-10">
+                    Aura provides comprehensive solutions to keep your website secure, updated, and performing at its best. Focus on your business, we'll handle the rest.
+                </p>
+                <a href="#services" class="bg-indigo-600 text-white font-bold py-4 px-8 rounded-lg text-lg hover:bg-indigo-700 transition-transform duration-300 hover:scale-105 inline-block">
+                    Explore Our Services
+                </a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 md:py-28 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Our Management Services</h2>
+                <p class="section-subtitle">
+                    We offer a complete suite of services to ensure your online presence is powerful, professional, and protected.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="bg-indigo-100 text-indigo-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Security & Monitoring</h3>
+                        <p class="text-gray-600">Proactive 24/7 monitoring, malware scanning, and firewall management to protect your site from threats.</p>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="bg-indigo-100 text-indigo-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Content & Plugin Updates</h3>
+                        <p class="text-gray-600">We handle all core, theme, and plugin updates, plus assist with content changes to keep your site fresh.</p>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                        <div class="bg-indigo-100 text-indigo-600 rounded-full w-16 h-16 flex items-center justify-center mb-6">
+                           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Performance Optimization</h3>
+                        <p class="text-gray-600">Speed optimization, caching, and database tuning to ensure your website loads quickly for all visitors.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 md:py-28 gradient-bg">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-12">
+                     <div class="md:w-1/2">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">About Aura</h2>
+                        <p class="text-gray-600 mb-4">
+                            Aura was founded with a simple mission: to demystify website management for business owners. We believe you should be able to focus on what you do best, without worrying about the technical complexities of your online presence.
+                        </p>
+                        <p class="text-gray-600">
+                            Our team of experts brings years of experience in web development, security, and digital strategy. We act as your dedicated web partner, providing reliable support and proactive management to help your business thrive online.
+                        </p>
+                    </div>
+                    <div class="md:w-1/3">
+                        <img src="https://placehold.co/600x600/e2e8f0/4f46e5?text=Aura+Team" alt="Aura Team Placeholder" class="rounded-xl shadow-2xl w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 md:py-28 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-subtitle">
+                    Have a question or ready to start? Fill out the form below and we'll get back to you as soon as possible.
+                </p>
+                <div class="max-w-2xl mx-auto bg-gray-50 p-8 rounded-xl shadow-lg">
+                    <form>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <input type="text" placeholder="Your Name" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <input type="email" placeholder="Your Email" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        <div class="mb-6">
+                            <input type="text" placeholder="Subject" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        </div>
+                        <div class="mb-6">
+                            <textarea placeholder="Your Message" rows="5" class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-transform duration-300 hover:scale-105">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-10">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-xl font-bold">Aura<span class="text-indigo-400">.</span></h3>
+                    <p class="text-gray-400">Your Partner in Website Management.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Facebook</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">Twitter</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 Aura. All Rights Reserved.</p>
+            </div>
         </div>
-        <div class="video-card">
-          <img src="https://via.placeholder.com/300x180.png?text=Gaming" alt="Video 3">
-          <p>Epic Gaming Moments — 14:07</p>
-        </div>
-        <div class="video-card">
-          <img src="https://via.placeholder.com/300x180.png?text=Travel" alt="Video 4">
-          <p>Explore the World — 09:55</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </footer>
 
-  <section class="features">
-    <div class="container">
-      <h2>Why Choose Us?</h2>
-      <ul>
-        <li><strong>Upload Instantly:</strong> Share your content in seconds.</li>
-        <li><strong>Monetize:</strong> Earn revenue from your views.</li>
-        <li><strong>Fast Streaming:</strong> Watch high-quality videos anytime.</li>
-      </ul>
-    </div>
-  </section>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-  <section class="contact" id="upload">
-    <div class="container">
-      <h2>Get in Touch</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Email" required />
-        <textarea placeholder="Your Message"></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </div>
-  </section>
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 YouTube Replica — Built for Demo Use</p>
-    </div>
-  </footer>
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        for (let link of mobileMenuLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+    </script>
 
-  <script src="script.js"></script>
 </body>
 </html>
